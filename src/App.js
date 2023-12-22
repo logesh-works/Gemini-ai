@@ -75,7 +75,7 @@ function App() {
       <ul>
         <li>Text To Text</li>
         <li onClick={() => alert("Still under development")}>Image To Text</li>
-        <a href="https://logesh-works.github.io/" style={{textDecoration:"none"}}><li>About Logesh</li></a>
+        <a href="https://logesh-works.github.io/" style={{textDecoration:"none"}}><li>About Developer</li></a>
       </ul>
     </div>
     {/* <div className='response'><p>{response}</p></div> */}
