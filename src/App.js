@@ -1,11 +1,9 @@
 import './App.css';
-import { useEffect, useState , useRef} from 'react';
+import { useEffect, useState } from 'react';
 import Badge from 'react-bootstrap/Badge';
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import { FaRegCopy , FaCopy} from "react-icons/fa";
 import copy from 'clipboard-copy';
-import Img from './Img';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 function App() {
   const [isloading , Setloading] = useState(true)
@@ -22,7 +20,7 @@ function App() {
       const result = await model.generateContent(prompt)
       const response = await result.response;
       let text = response.text();
-      Setresponse(text);
+      return text;
     } catch (error) {
       Setresponse(error.text)
       console.log(error.text)
@@ -35,15 +33,18 @@ function App() {
       .finally(() => {Setloading(false)});   */
       
   }
+  // eslint-disable-next-line
   useEffect(() => {
-    grd(request);
     
-  },[request])
+    grd(request).then((res) => Setresponse(res) )
+      
+  }
+    ,[request]);// eslint-disable-line react-hooks/exhaustive-deps
   const toggleNav = () => {
     setIsOpen(!isOpen);
   };
   const copynav = () => {
-    if(iscopy != true){
+    if(iscopy !== true){
       setIscopy(true)
     }
     else{
