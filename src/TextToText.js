@@ -57,7 +57,6 @@ const TextToText = () => {
         alert('Text copied to clipboard!');
       }
     }; 
-    useEffect(() => {Setresponse("Welcome To Gemini AI ")} , [])
     return (
       <>
       <div id='heading'>
