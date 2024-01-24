@@ -139,7 +139,7 @@ const ImgtoText = () => {
           <p style={{color:'white'}}>Selected Files:</p>
             {fileInputs.map((file, index) => (
               <li key={index}>
-                <img className='meshow' src={URL.createObjectURL(file)} alt={`Selected Image ${index + 1}`} />
+                <img className='meshow' src={URL.createObjectURL(file)} alt={`Selected  ${index + 1}`} />
               </li>
             ))}
         </div>
