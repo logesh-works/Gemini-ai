@@ -164,8 +164,9 @@
     min-height: 550px;
   }
   .copybtn{
-    top: 25%;
-    right: 15%; 
+    position: fixed;
+    top: 120px;
+    right: 50px;
     background-color: transparent;
     border: none;
   }
