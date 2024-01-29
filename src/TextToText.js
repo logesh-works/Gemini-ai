@@ -12,7 +12,7 @@ const TextToText = () => {
     const [request , Setrequest] = useState(null);
     const [isOpen, setIsOpen] = useState(false);
     const [iscopy, setIscopy] = useState(false);
-    const API_KEY = "AIzaSyAs2stO1DOojDmaxRYwZpVLSvofVh-KYdk"
+    const API_KEY = "AIzaSyAhJ_QIHXzG0cLuH2HYi4Bir7JvGJlZRsg"
     const genAI = new GoogleGenerativeAI(API_KEY);
     const model = genAI.getGenerativeModel({ model: "gemini-pro"});
     async function grd(prompt) {
@@ -37,7 +37,7 @@ const TextToText = () => {
     useEffect(() => {
       
       grd(request).then((res) => Setresponse(res) )
-        
+      console.log(1)
     }
       ,[request]);// eslint-disable-line react-hooks/exhaustive-deps
     const toggleNav = () => {
