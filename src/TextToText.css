@@ -1,5 +1,6 @@
 
 #heading{
+  color: wheat;
     border-radius: 8px;
     margin-top:10%;
     text-align: center;
@@ -63,6 +64,8 @@
     background-color: #555;
   }
   .protext{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: rgba(255, 255, 255, 0.75);
     position: fixed;
     bottom: 6%;
     width: 50%;
@@ -93,9 +96,11 @@
     transform: scale(1.4);
   }
   .response{
-    font-size: large;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: 500;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: rgba(255, 255, 255, 0.75);
+    color: black;
+    font-size: x-large;
+    font-weight: 800;
     padding: 10px;
     position: absolute;
     width: 60%;

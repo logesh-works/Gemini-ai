@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import "../public/download.svg"
 import Badge from 'react-bootstrap/Badge';
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import { FaRegCopy , FaCopy} from "react-icons/fa";
@@ -7,7 +8,7 @@ import "./TextToText.css"
 import { NavLink } from 'react-router-dom';
 const TextToText = () => {
     const [isloading , Setloading] = useState(false)
-    const [response , Setresponse] = useState("Hello! I am LoFi AI, and I am here to welcome you to our chat. I am an AI assistant that can help you with a variety of tasks, including answering your questions, providing information, and generating creative content. I am still under development, but I am always learning and growing. I am excited to help you make the most of your chat experience.");
+    const [response , Setresponse] = useState("Hello! I am Gemini AI, and I am here to welcome you to our chat. I am an AI assistant that can help you with a variety of tasks, including answering your questions, providing information, and generating creative content. I am still under development, but I am always learning and growing. I am excited to help you make the most of your chat experience.");
     const [currequest , Setcurrequest] = useState("");
     const [request , Setrequest] = useState(null);
     const [isOpen, setIsOpen] = useState(false);
@@ -60,7 +61,8 @@ const TextToText = () => {
     return (
       <>
       <div id='heading'>
-        <span id="spa1">LoFi AI </span>
+      <img></img>
+        <span id="spa1">GEMINI AI </span>
         <a href='https://linktr.ee/me_logi' style={{textDecoration:"none"}}><span id="spa2">From Logesh</span></a>
       </div>
       
@@ -85,43 +87,10 @@ const TextToText = () => {
       <textarea className='response' value={(isloading ? "Loading...":response)} readOnly></textarea>
       <button className='copybtn' onClick={()=>{copynav()
       handleCopy()}}>{(iscopy ? <FaCopy /> : <FaRegCopy />  )}</button>
-<form
-  onSubmit={(e) => {
-    e.preventDefault(); // Prevents the form from submitting normally
-    if (currequest === '') {
-      Setresponse('Please enter some text');
-    } else {
-      Setrequest(currequest);
-      Setloading(true);
-    }
-  }}
->
-  <textarea
-    className='protext'
-    rows="1"
-    onChange={(e) => {
-      Setcurrequest(e.target.value);
-    }}
-    value={currequest}
-    placeholder='Search Here...'
-    onKeyDown={(e) => {
-      if (e.key === 'Enter' && !e.shiftKey) {
-        e.preventDefault(); // Prevents the default behavior of the Enter key
-        // Trigger the form submission
-        if (currequest === '') {
-          Setresponse('Please enter some text');
-        } else {
-          Setrequest(currequest);
-          Setloading(true);
-        }
-      }
-    }}
-  ></textarea>
-  <button type="submit" className='submit'>
-    Submit
-  </button>
-</form>
-
+      <textarea className='protext' rows="1" onChange={(e) => {Setcurrequest(e.target.value) 
+  }} value={currequest} placeholder='Search Here...'></textarea>
+      <button className='submit' onClick={() => {(currequest === "" ? Setresponse("Please enter some text"):Setrequest(currequest))
+    Setloading(true)}}>Submit</button>
       
       </>
     );

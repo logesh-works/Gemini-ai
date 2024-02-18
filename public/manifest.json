@@ -1,19 +1,19 @@
 {
-  "short_name": "Gemini AI",
-  "name": "Gemini AI From Logesh",
+  "short_name": "LoFi AI",
+  "name": "LoFi AI From Logesh",
   "icons": [
     {
-      "src": "https://icons.iconarchive.com/icons/papirus-team/papirus-apps/256/google-icon.png",
+      "src": "favicon.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/png"
     },
     {
-      "src": "https://icons.iconarchive.com/icons/papirus-team/papirus-apps/256/google-icon.png",
+      "src": "favicon.ico",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "https://icons.iconarchive.com/icons/papirus-team/papirus-apps/256/google-icon.png",
+      "src": "favicon.ico",
       "type": "image/png",
       "sizes": "512x512"
     }
