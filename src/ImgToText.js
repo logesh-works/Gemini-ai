@@ -10,7 +10,7 @@ const ImgtoText = () => {
   const [response, Setresponse] = useState('Hello! I am Lofi AI, and I am here to welcome you to our chat. I am an AI assistant that can help you with a variety of tasks, including answering your questions, providing information, and generating creative content. I am still under development, but I am always learning and growing. I am excited to help you make the most of your chat experience.\n\t\t\t\t\t\t\t Image to Text \n 1. You can add Single image or mutliple Image. \n 2. Add some prompt .\n 3 .Click Sumbit button.');
   const [currequest, Setcurrequest] = useState('');
   const [request, Setrequest] = useState(
-    'welcome the user to your chat the name was Gemini AI'
+    'welcome the user to your chat and your name was Lofi AI , You trained by Logesh'
   );
   const [isOpen, setIsOpen] = useState(false);
   const [iscopy, setIscopy] = useState(false);
