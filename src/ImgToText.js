@@ -17,7 +17,7 @@ const ImgtoText = () => {
   const [fileInputs, setFileInputs] = useState([]);
   const API_KEY = 'AIzaSyDwfE0aUI186xG-Vm0cXfoy0kYFsNRsx5w';
   const genAI = new GoogleGenerativeAI(API_KEY);
-  const model = genAI.getGenerativeModel({ model: 'gemini-pro-vision' });
+  const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash"});
 
   const handleFileChange = (e) => {
     const files = Array.from(e.target.files);

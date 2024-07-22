@@ -14,7 +14,7 @@ const TextToText = () => {
     const [iscopy, setIscopy] = useState(false);
     const API_KEY = "AIzaSyC_8SD5pDg6-ZG9Azr7pDuGarlT_EbqGhI"
     const genAI = new GoogleGenerativeAI(API_KEY);
-    const model = genAI.getGenerativeModel({ model: "gemini-pro"});
+    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash"});
     async function grd(prompt) {
       try {
         const result = await model.generateContent(prompt)
