@@ -12,12 +12,12 @@ const TextToText = () => {
     const [request , Setrequest] = useState(null);
     const [isOpen, setIsOpen] = useState(false);
     const [iscopy, setIscopy] = useState(false);
-    const API_KEY = "AIzaSyC_8SD5pDg6-ZG9Azr7pDuGarlT_EbqGhI"
+    const API_KEY = "AIzaSyAGyRmuPlhExsXn3Dq1JlkZLfFgpxRbhmA"
     const genAI = new GoogleGenerativeAI(API_KEY);
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash"});
     async function grd(prompt) {
       try {
-        const result = await model.generateContent("hey say yes")
+        const result = await model.generateContent(prompt)
         const response = await result.response;
         let text = response.text();
         return text;
