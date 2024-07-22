@@ -17,7 +17,7 @@ const TextToText = () => {
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash"});
     async function grd(prompt) {
       try {
-        const result = await model.generateContent(prompt)
+        const result = await model.generateContent("hey say yes")
         const response = await result.response;
         let text = response.text();
         return text;
