@@ -15,7 +15,7 @@ const ImgtoText = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [iscopy, setIscopy] = useState(false);
   const [fileInputs, setFileInputs] = useState([]);
-  const API_KEY = 'AIzaSyDwfE0aUI186xG-Vm0cXfoy0kYFsNRsx5w';
+  const API_KEY = 'AIzaSyAGyRmuPlhExsXn3Dq1JlkZLfFgpxRbhmA';
   const genAI = new GoogleGenerativeAI(API_KEY);
   const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash"});
 
